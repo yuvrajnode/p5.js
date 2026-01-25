@@ -630,7 +630,10 @@ p5.RendererGL = class RendererGL extends p5.Renderer {
           new p5.RenderBuffer(3, 'lineTangentsOut', 'lineTangentsOutBuffer', 'aTangentOut', this),
           new p5.RenderBuffer(1, 'lineSides', 'lineSidesBuffer', 'aSide', this)
         ],
-        point: this.GL.createBuffer()
+        point: [
+          new p5.RenderBuffer(3, 'vertices', 'pointVertexBuffer', 'aPosition', this, this._vToNArray),
+          new p5.RenderBuffer(4, 'vertexStrokeColors', 'pointColorBuffer', 'aVertexColor', this)
+        ]
       }
     };
 
@@ -934,6 +937,30 @@ p5.RendererGL = class RendererGL extends p5.Renderer {
  * [background description]
  */
   background(...args) {
+    const a0 = args[0];
+
+    const isImageLike =
+      a0 instanceof p5.Image ||
+      a0 instanceof p5.Graphics ||
+      (typeof HTMLImageElement !== 'undefined' && a0 instanceof HTMLImageElement) ||
+      (typeof HTMLVideoElement !== 'undefined' && a0 instanceof HTMLVideoElement) ||
+      (typeof p5.MediaElement !== 'undefined' && a0 instanceof p5.MediaElement);
+
+    // WEBGL: support background(image)
+    if (args.length > 0 && isImageLike) {
+      // Clear WebGL buffers (color + depth)
+      this._pInst.clear();
+
+      // Draw background image in screen space (ignore camera)
+      this._pInst.push();
+      this._pInst.resetMatrix();
+      this._pInst.imageMode(this._pInst.CENTER);
+      this._pInst.image(a0, 0, 0, this._pInst.width, this._pInst.height);
+      this._pInst.pop();
+      return;
+    }
+
+    // Default WEBGL background(color)
     const _col = this._pInst.color(...args);
     const _r = _col.levels[0] / 255;
     const _g = _col.levels[1] / 255;
@@ -1986,6 +2013,7 @@ p5.RendererGL = class RendererGL extends p5.Renderer {
             'vec3 getLocalPosition': '(vec3 position) { return position; }',
             'vec3 getWorldPosition': '(vec3 position) { return position; }',
             'float getPointSize': '(float size) { return size; }',
+            'vec4 getVertexColor': '(vec4 color) { return color; }',
             'void afterVertex': '() {}'
           },
           fragment: {
@@ -2337,6 +2365,12 @@ p5.RendererGL = class RendererGL extends p5.Renderer {
       'uPointSize',
       this.pointSize * this._pInst._pixelDensity
     );
+    // Enable per-vertex color for POINTS when available
+    const useVertexColor =
+      (this.immediateMode && this.immediateMode.geometry &&
+       this.immediateMode.geometry.vertexStrokeColors &&
+       this.immediateMode.geometry.vertexStrokeColors.length > 0);
+    pointShader.setUniform('uUseVertexColor', !!useVertexColor);
   }
 
   /* Binds a buffer to the drawing context

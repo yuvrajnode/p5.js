@@ -1085,6 +1085,18 @@
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/menacingly-coded"><img src="https://avatars.githubusercontent.com/u/121508087?v=4?s=64" width="64px;" alt="Shreya Sharma"/><br /><sub><b>Shreya Sharma</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=menacingly-coded" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/Itsrajsk"><img src="https://avatars.githubusercontent.com/u/117977675?v=4?s=64" width="64px;" alt="Raj Kashid"/><br /><sub><b>Raj Kashid</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=Itsrajsk" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Geethegreat"><img src="https://avatars.githubusercontent.com/u/86944224?v=4?s=64" width="64px;" alt="krishnageeth"/><br /><sub><b>krishnageeth</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=Geethegreat" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="http://piyushh.me"><img src="https://avatars.githubusercontent.com/u/163632958?v=4?s=64" width="64px;" alt="PIYUSH RATHORE"/><br /><sub><b>PIYUSH RATHORE</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=Piyushrathoree" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Aayushdev18"><img src="https://avatars.githubusercontent.com/u/148681565?v=4?s=64" width="64px;" alt="Ayush Dev"/><br /><sub><b>Ayush Dev</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=Aayushdev18" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/rakesh2OO5"><img src="https://avatars.githubusercontent.com/u/160116250?v=4?s=64" width="64px;" alt="Rakesh D"/><br /><sub><b>Rakesh D</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=rakesh2OO5" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://doradocodes.com/"><img src="https://avatars.githubusercontent.com/u/140831752?v=4?s=64" width="64px;" alt="Dora Do"/><br /><sub><b>Dora Do</b></sub></a><br /><a href="https://github.com/processing/p5.js/pulls?q=is%3Apr+reviewed-by%3Adoradocodes" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Nwakaego-Ego"><img src="https://avatars.githubusercontent.com/u/81041326?v=4?s=64" width="64px;" alt="Nwakaego Glory Nwaekpe"/><br /><sub><b>Nwakaego Glory Nwaekpe</b></sub></a><br /><a href="https://github.com/processing/p5.js/pulls?q=is%3Apr+reviewed-by%3ANwakaego-Ego" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/vietnguyen2358"><img src="https://avatars.githubusercontent.com/u/107826279?v=4?s=64" width="64px;" alt="Viet Nguyen"/><br /><sub><b>Viet Nguyen</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=vietnguyen2358" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/shuklaaryan367-byte"><img src="https://avatars.githubusercontent.com/u/228463828?v=4?s=64" width="64px;" alt="aryan-shukla"/><br /><sub><b>aryan-shukla</b></sub></a><br /><a href="https://github.com/processing/p5.js/commits?author=shuklaaryan367-byte" title="Code">💻</a></td>
+    </tr>
   </tbody>
 </table>
 
