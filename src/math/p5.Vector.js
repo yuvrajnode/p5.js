@@ -3095,8 +3095,8 @@ p5.Vector = class {
   }
 
   // Static Methods
-  
-   /**
+
+  /**
  * Creates a vector from an angle.
  *
  * Note: internally p5.Vector objects store three components `[x, y, z]`.
