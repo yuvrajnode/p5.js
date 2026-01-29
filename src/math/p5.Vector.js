@@ -3097,7 +3097,13 @@ p5.Vector = class {
   // Static Methods
 
   /**
- * Creates a new 2D vector from an angle.
+ * Creates a vector from an angle.
+ *
+ * Note: internally p5.Vector objects store three components `[x, y, z]`.
+ * For 2D usage the `z` component is set to `0`. This design keeps vector
+ * maths consistent across 2D and 3D (so e.g. dot/cross product logic can
+ * be implemented once and reused). If you only need the x/y values, you can
+ * ignore the z component.
  *
  * @method fromAngle
  * @static
@@ -3112,7 +3118,7 @@ p5.Vector = class {
  *   // Create a p5.Vector object.
  *   let v = p5.Vector.fromAngle(0);
  *
- *   // Prints "p5.Vector Object : [1, 0, 0]" to the console.
+ *   // Prints "p5.Vector Object : [1, 0, 0]" to the console (z is 0).
  *   print(v.toString());
  * }
  * </code>
@@ -3121,7 +3127,7 @@ p5.Vector = class {
  * <div class="norender">
  * <code>
  * function setup() {
- *   // Create a p5.Vector object.
+ *   // Create a p5.Vector object with a length.
  *   let v = p5.Vector.fromAngle(0, 30);
  *
  *   // Prints "p5.Vector Object : [30, 0, 0]" to the console.
